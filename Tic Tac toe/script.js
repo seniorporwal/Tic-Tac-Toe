@@ -20,25 +20,31 @@ const winningPattern = [
 
 printWinner = (name) => {
   console.log(`Winner is ${name}`);
-  winner.innerHTML = `Winner is ${name}`;
+  winner.innerHTML = `${name} Wins`;
   winner.classList.remove("hide");
   newBtn.classList.remove("hide");
   resetBtn.classList.add("hide");
 };
 
-// enableButton = () => {
-//   boxes.forEach((box) => {
-//     box.disabled = false;
-//   });
-// };
+enableButton = () => {
+  boxes.forEach((box) => {
+    box.disabled = false;
+  });
+};
+
+disableButton = () => {
+  boxes.forEach((box) => {
+    box.disabled = true;
+  });
+};
 
 resetBtn.addEventListener("click", (e) => {
   resetGame();
 });
 
 resetGame = () => {
+  enableButton();
   boxes.forEach((box) => {
-    box.disabled = false;
     box.innerText = "";
   });
 };
@@ -48,8 +54,8 @@ newBtn.addEventListener("click", (e) => {
 });
 
 newGame = () => {
+  enableButton();
   boxes.forEach((box) => {
-    box.disabled = false;
     box.innerText = "";
     winner.classList.add("hide");
     newBtn.classList.add("hide");
@@ -68,6 +74,7 @@ boxes.forEach((box) => {
     }
     box.disabled = true;
     checkWinner();
+    checkNoWinner();
   });
 });
 
@@ -80,8 +87,21 @@ const checkWinner = () => {
     const pos3Val = boxes[pattern[2]].innerText;
     if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
       if (pos1Val === pos2Val && pos2Val === pos3Val) {
+        disableButton();
         printWinner(pos1Val);
       }
     }
+  }
+};
+
+const checkNoWinner = () => {
+  let count = 0;
+  for (let box of boxes) {
+    if (box.innerText != "") {
+      count++;
+    }
+  }
+  if (count === 9) {
+    printWinner("No one");
   }
 };
