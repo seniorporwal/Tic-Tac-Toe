@@ -1,6 +1,6 @@
 # Tic Tac Toe Game
 
-![Tic Tac Toe](https://drive.google.com/file/d/1mw5xOH6wsZKOaySo2g0zBnr56hkX3QM2/view?usp=sharing)
+![Tic Tac Toe](https://github.com/seniorporwal/Tic-Tac-Toe/assets/96917403/be53e878-5f58-412e-a36a-95fe68e823b9)
 
 ## Overview
 
