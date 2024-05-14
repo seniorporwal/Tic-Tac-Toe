@@ -29,8 +29,7 @@ h1 {
   /* min-width: 220px; */
   display: flex;
   flex-wrap: wrap;
-  /*gap: 1em;  This is what was making the website unresponsive on lower screen sizes.*/
-  gap: 3vmin;  
+  gap: 3vmin;
   justify-content: center;
   align-items: center;
 }
@@ -53,7 +52,7 @@ h1 {
   transform: translate(-50%, 0);
   background-color: lavenderblush;
   text-align: center;
-  font-size: 1em;
+  font-size: 3vmin;
   border-radius: 10px;
   border: none;
   box-shadow: 5px 5px 5px #a0deff;
@@ -67,7 +66,7 @@ h1 {
   transform: translate(-50%, 0);
   background-color: lavenderblush;
   text-align: center;
-  font-size: 1em;
+  font-size: 3vmin;
   border-radius: 10px;
   border: none;
   box-shadow: 5px 5px 5px #a0deff;
