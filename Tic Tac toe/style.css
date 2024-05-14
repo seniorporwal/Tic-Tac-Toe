@@ -26,10 +26,11 @@ h1 {
   height: 60vmin;
   width: 60vmin;
   max-width: 100%;
-  min-width: 220px;
+  /* min-width: 220px; */
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
+  /*gap: 1em;  This is what was making the website unresponsive on lower screen sizes.*/
+  gap: 3vmin;  
   justify-content: center;
   align-items: center;
 }
