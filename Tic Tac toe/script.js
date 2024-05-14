@@ -19,8 +19,11 @@ const winningPattern = [
 //console.log("hello");
 
 printWinner = (name) => {
-  console.log(`Winner is ${name}`);
-  winner.innerHTML = `${name} Wins`;
+  if (name === "Draw") {
+    winner.innerHTML = `Game is ${name}`;
+  } else {
+    winner.innerHTML = `Winner is ${name}`;
+  }
   winner.classList.remove("hide");
   newBtn.classList.remove("hide");
   resetBtn.classList.add("hide");
@@ -102,6 +105,6 @@ const checkNoWinner = () => {
     }
   }
   if (count === 9) {
-    printWinner("No one");
+    printWinner("Draw");
   }
 };
